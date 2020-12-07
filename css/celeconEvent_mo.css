@@ -1,0 +1,197 @@
+/* web font (open sans) */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=DM+Sans:400,500,700);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; color: #404040; font-size: 12px; font-family: 'Open Sans', 'Noto Sans KR', Malgun Gothic, '맑은 고딕', AppleGothic, Dotum, '돋움', sans-serif; vertical-align: baseline; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1.6; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+img {vertical-align:top;}
+input[type=radio],
+input[type=checkbox] {vertical-align:middle;}
+input[type=text],
+input[type=email],
+input[type=password] {vertical-align:top;}
+a,
+a:hover,
+a:active, 
+a:focus { text-decoration:none; }
+*,
+*:before,
+*:after {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+
+/* -------------------- LAYOUT -------------------- */
+.wrapper { position: relative; width: 100%; }
+.wrap_inner { margin: 0 10px; }
+.wrap_inner2 { padding: 10px; }
+
+.hidden { visibility: hidden; overflow: hidden; width: 0; height: 0; margin: 0; padding: 0; font-size: 0;line-height: 0; }
+
+/* 상품레이아웃 */
+.prd_basic {display:block; overflow: hidden;; font-size:0; }
+.prd_basic > li {display:inline-block; padding:0 0 60px; vertical-align:top; background:#fff;}
+
+/* 상품 그리드 */
+.prd_basic.col2 > li {width:50%;}
+
+/* -------------------- HEADER -------------------- */
+header .hgroup { position: relative; overflow: hidden; margin: 0; padding: 0 10px; width: 100%; height: 55px; background: #fff; border-bottom: 1px solid #ddd; z-index: 10; }
+header .logo { position: absolute; top: 0; left: 10px; }
+header .logo a { display: block; padding: 20px 0; width: 98px; height: 55px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/logo/logo.png) no-repeat center; background-size: contain; text-indent: -9999em; }
+header .sub .btn_back { display: none; position: absolute; top: 0; left: 10px; width: 34px; height: 55px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/button/back.png) no-repeat center / 34px 13px; }
+header .sub .page_title { display: none; padding: 0 80px; }
+header .sub .page_title .subtitle { overflow: hidden; font-size: 1.167rem; font-weight: 600; text-align: center; line-height: 55px; text-overflow: ellipsis; white-space: nowrap;}
+header .gnb { position: absolute; top: 0; right: 10px; height: 55px; }
+header .gnb .util { overflow: hidden; }
+header .gnb .util > li { float: left; margin: 0 0 0 5px; }
+header .gnb .util > li > a { display: block; position: relative; width: 35px; height: 25px; cursor: pointer; }
+header .gnb .util > li.cart > a { width: 34px; height: 55px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/gnb_cart.png) no-repeat center; background-size: 15px; }
+header .gnb .util > li.search > a { width: 34px; height: 55px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/gnb_search.png) no-repeat center; background-size: 18px; }
+
+header .lnb { position: relative; width: 100%; height: 45px; margin: 0 auto; background: #161616; font-size: 0; text-align: center;   z-index: 10;}
+header .lnb .swiper-container { overflow: hidden; height: 45px; }
+header .lnb .swiper-wrapper .swiper-slide { width: auto; padding: 0 10px; text-align: center; }
+header .lnb .swiper-wrapper .swiper-slide a { display: block; overflow: hidden; width: 100%; height: 45px; padding: 0; color: #fff; font-size: 1.083rem; font-weight: 600; line-height: 45px; text-overflow: ellipsis; white-space: nowrap; }
+header .lnb .swiper-wrapper .swiper-slide.bar { padding-left: 30px; }
+header .lnb .swiper-wrapper .swiper-slide.bar:before { content: ''; position: absolute; top: calc(50% - 5px); left: 10px; width: 1px; height: 10px; background: #ddd; content: ''; }
+header .lnb .swiper-wrapper .swiper-slide.selected a { color: #eed095; }
+
+header .search_layer { display: none; overflow-y: auto; position: fixed; top: 0; left: 0; width: 100%; height: 100%; padding: 45px 15px 30px; background: #fff; z-index: 100; }
+header .search_layer .close { position: absolute; top: 5px; right: 5px; width: 31px; height: 31px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/button/search_close.png) no-repeat center / 16px; }
+header .search_layer .search_bar { position: relative; overflow: hidden; height: 55px; padding-right: 50px; background: #f3f6f7; }
+header .search_layer .search_bar .basic_search { width: 100%; height: 55px; padding: 0 0 0 20px; border: 0; background: transparent; font-size: 1.167rem; line-height: 55px; }
+header .search_layer .search_bar .btn { position: absolute; top: 0; right: 5px; width: 50px; height: 55px; border: 0; outline: 0; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/button/search_run.png) no-repeat center / 18px; color: transparent; text-indent: -9999em; }
+header .search_layer .keyword { margin: 26px 0 0 0; }
+header .search_layer .keyword .title { font-size: 2.500rem; font-weight: bold; }
+header .search_layer .keyword .list { margin-left: -10px; font-size: 0; }
+header .search_layer .keyword .list > li { display: inline-block; margin: 10px 0 0 10px; vertical-align: top; }
+header .search_layer .keyword .list > li a { display: block; padding: 5px 7px; border: 1px solid #ddd; border-radius: 6px; color: #888; letter-spacing: -0.5px; line-height: 1; }
+
+header.is_fix .hgroup { position: fixed; left: 0; top: 0; box-shadow: 0 0 1px 1px rgba(0,0,0,0.1); }
+header.is_fix .logo { display: none; }
+header.is_fix .lnb { display: none; }
+header.is_fix .sub .btn_back,
+header.is_fix .sub .page_title { display: block; }
+
+/* -------------------- #nav_bottom -------------------- */
+#nav_bottom { position: fixed; bottom: 0; left: 0; width: 100%; background: #161616; transform: translate(0,0); -webkit-transform: translate(0,0); transition: all 0.5s; -webkit-transition: all 0.5s; z-index: 80; }
+#nav_bottom ul { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+#nav_bottom ul > li { flex: 1; height: 45px; text-align: center; }
+#nav_bottom ul > li a { display: block; height: inherit; }
+#nav_bottom ul > li.home a { background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/nav_home.png) no-repeat center; background-size: 18px auto; }
+#nav_bottom ul > li.mypage a { background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/nav_mypage.png) no-repeat center; background-size: 16px; }
+#nav_bottom ul > li.recent a { background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/nav_recent.png) no-repeat center; background-size: 16px; }
+#nav_bottom .btn_scroll { display: none; position: absolute; bottom: calc(100% + 10px); right: 10px; width: 35px; background: #404040; z-index: 10; }
+#nav_bottom .btn_scroll a.up { display: block; height: 35px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/bullet_scrollup.png) no-repeat center; background-size: 16px 8px; font-size: 0; text-align: center; cursor: pointer; }
+
+/* -------------------- event_content -------------------- */
+#boardview .top_area { position: relative; padding: 0 0 5px; border-bottom: 1px solid #ddd; }
+#boardview .top_area .subject { padding: 0 0 15px; font-size: 1.167rem; font-weight: bold; }
+#boardview .top_area .add { position: relative; min-height: 22px; padding-top: 3px; color: #888; font-size: 0.833rem; font-weight: 300; text-align: right; }
+#boardview .boxview { padding: 10px 0 0; }
+#boardview .boxview  * { font-family: 'DM Sans', 'Open Sans', 'Noto Sans KR', sans-serif, Arial, Helvetica, 'Helvetica Neue', 'Malgun Gothic', '맑은 고딕', AppleGothic, Dotum, 돋움; }
+#boardview .boxview img { max-width: 100%; }
+#boardview .event_button { overflow: hidden; padding: 15px 20px; background: url(https://celecon.com/_skin/celecon_kor_2/img/etc/event_button_bg.jpg); border-top: 1px solid #5d5d5d; }
+#boardview .event_button li { overflow: hidden; padding: 15px 0; border-top: 1px solid #5d5d5d; }
+#boardview .event_button li:first-child { border-top: 0; }
+#boardview .event_button a { display: block; }
+#boardview .event_button .event_number { color: #f7882e; font-size: 1.167rem; }
+#boardview .event_button a strong { margin: 0 0 0 5px; color: #fff; font-size: 1.167rem; text-transform: uppercase; }
+#boardview .event_button .summary { position: relative; float: right; padding: 0 20px 0 0; color: #fff; font-size: 0.9rem; font-weight: 200; }
+#boardview .event_button .summary::after { content: ''; position: absolute; top: calc( 50% - 3px ); right: 0; width: 12px; height: 6px; background: url(https://celecon.com/_skin/celecon_kor_2/img/common/bullet_recent_down.png) no-repeat center; background-size: 80%; }
+#boardview #coupon { padding: 60px 0 0px; }
+#boardview .text_area { color: #000; text-align: center; font-size: 1.167rem; line-height: 1.3; }
+#boardview .text_area strong { display: block; color: #000; font-size: 2.5rem; }
+#boardview .text_area span { display: block; margin: 15px 0 0; color: #000; font-size: 1.2rem; }
+#boardview .coupon_area { margin: 40px 0 0; text-align: center; }
+#boardview .coupon_img { margin: 0 auto; width: 70%; background: url(https://celecon.com/_skin/celecon_kor_2/img/etc/coupon_box.png) no-repeat center; background-size: contain; }
+#boardview .coupon_name { padding: 10px 0 0; color: #fff; font-size: 1.167rem; letter-spacing: 2px; }
+#boardview .memberCountCon { padding: 10px 0 0; color: #fff; font-size: 4rem; font-weight: bold; line-height: 1; }
+#boardview .celecon { padding: 10px 0 10px; color: #fff; font-size: 1.167rem; text-transform: uppercase; }
+#boardview .coupon_button { margin: 25px 0 0; padding: 15px 12px; width: 70%; color: #000; font-size: 1.2rem; font-weight: bold; border: inherit; background: #fff; border: 1px solid #000;outline: inherit; cursor: pointer; }
+#boardview .schedule_info { margin: 15px 0 0; color: #8a8a8a; font-size: 1rem; }
+#boardview .notice_area { margin: 60px 0 0; padding: 40px 20px; background: #eee; }
+#boardview .notice_area p { position: relative; padding: 0 0 0 20px; color: #8a8a8a; font-size: 1.167rem; line-height: 1; text-transform: uppercase; }
+#boardview .notice_area p::before { content: ''; position: absolute; top: 0; left: 0; width: 13px; height: 15px; background: url(https://celecon.com/_skin/celecon_kor_2/img/etc/membership_notice.png) no-repeat center; background-size: contain; }
+#boardview .notice_area ul { margin: 15px 0 0 15px; }
+#boardview .notice_area li { margin: 5px 0 0; list-style: disc; color: #8a8a8a; font-size: 0.8rem; }
+#boardview #special_price { padding: 60px 0 0; background: #101010; }
+#boardview #special_price .text_area { color: #fff; }
+#boardview #special_price .text_area strong { margin: 0 0 15px; color: #fff; }
+#boardview .item_area { width: 100%; margin: 40px auto 0; }
+#boardview .item_area iframe { width: 100%; min-height: 600px; }
+#boardview .banner_area a { display: block; }
+#boardview .banner_area span { position: absolute; top: 0; right: 9999em; }
+#boardview #all_event { padding: 60px 0 0; background: #101010; }
+#boardview .contents_title { padding: 15px 0; color: #181818; text-align: center; font-size: 1.5rem; text-transform: uppercase; background: #fff; }
+#boardview .contents_title span { color: #181818; font-size: 1.5rem; font-weight: bold; text-transform: uppercase; }
+#boardview .tab_DAevent { overflow: hidden; }
+#boardview .tab_DAevent li:nth-child(1),
+#boardview .tab_DAevent li:nth-child(2),
+#boardview .tab_DAevent li:nth-child(3) { float: left; width: 33.3%; }
+#boardview .tab_DAevent li:nth-child(4),
+#boardview .tab_DAevent li:nth-child(5) { margin: -1px 0 0; float: left; width: 50%; }
+#boardview .tab_DAevent li a { display: block; padding: 10px 12px; border: 1px solid #c9c9c9; border-left: inherit; color: #707070; font-size: 15px; font-weight: bold; text-align: center; text-transform: uppercase; }
+#boardview .tab_DAevent li:nth-child(1) a,
+#boardview .tab_DAevent li:nth-child(4) a { border-left: 1px solid #c9c9c9; }
+#boardview .tab_DAevent li a:hover { background: #181818; color: #fff; font-weight: bold; border: 1px solid #181818;  }
+#boardview .tab_DAevent li:nth-child(1) a.active { border-left: inherit; }
+#boardview .tab_DAevent li a.active { background: #181818; color: #fff; font-weight: bold; border: 1px solid #181818; }
+#boardview .list_tab_content iframe { width: 100%; min-height: 800px; border: none; }
+#boardview .btn { border-top: 1px solid #e0e0e0; padding: 20px 0; overflow: hidden; }
+.box_btn { display: inline-block; text-align: center; vertical-align: top; }
+.box_btn > * { display: inline-block; padding: 8px 12px; border: 1px solid #404040; outline: none; background: #404040; color: #fff; font-weight: 300; text-align: center; vertical-align: middle; line-height: 1.4; white-space: nowrap; cursor: pointer; -webkit-appearance: none; -webkit-transition: all .2s ease; -moz-transition: all .2s ease; -ms-transition: all .2s ease; -o-transition: all .2s ease; transition: all .2s ease; }
+.box_btn.w100 > * { width: 100px; }
+
+@media only screen and (max-width: 320px){
+    #boardview .event_button .summary { display: block; float: inherit; text-align: right; }
+}
+
+/* -------------------- FOOTER -------------------- */
+footer .wrapper{ padding: 0 0 45px; background: #f4f4f4; text-align: center; }
+footer .notice { position: relative; padding: 0 35px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; background: #fff; }
+footer .notice .list > li a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 40px; }
+footer .notice .link { position: absolute; top: 0; right: 0; width: 35px; }
+footer .notice .link a { display: block; height: 40px; background: url(https://m.celecon.com/_skin/m_celecon_kor_2/img/common/bullet_link_more.png) no-repeat center / 15px; }
+footer .menu { text-align: center; }
+footer .menu > li { display: inline-block; position: relative; padding: 0 13px; vertical-align: top; }
+footer .menu > li > a { display: block; height: 50px; line-height: 50px }
+footer .menu > li::before { content: ''; display: block; position: absolute; top: calc(50% - 4px); left: 0; width: 1px; height: 8px; background: #404040; }
+footer .menu > li:first-child::before { display: none; }
+footer .shopinfo { padding: 15px 10px; border-top: 1px solid #ddd; }
+footer .shopinfo .info,
+footer .shopinfo .info * { font-size: 0.917rem; font-style: normal; }
+footer .shopinfo .info span { position: relative; padding: 0 5px; }
+footer .genuine_product,
+footer .genuine_product * { font-size: 0.917rem; }
+footer .shopinfo .copyright { margin: 15px 0 0; color: #888; }
+footer .shopinfo .copyright strong { color: #888; }
+footer .shopinfo .copyright a { color: #ccc; }
+footer .menu.btm > li > a { height: 25px; font-size: 0.917rem; line-height: 25px; }
+footer .share { padding: 20px 0; text-align: center; }
+footer .share li { display: inline-block; padding: 0 10px; vertical-align: top; }
+footer .share li a { display: block; padding: 5px; }
+footer .share li img { height: 15px; }
